@@ -25,10 +25,74 @@
                 font-size: 3.5rem;
             }
         }
+        #test_btn1{
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        #btn_group button{
+          border: 1px solid skyblue;
+          background-color: rgba(0,0,0,0);
+          color: skyblue;
+          padding: 5px;
+        }
+        #btn_group button:hover{
+          color:white;
+          background-color:
+          skyblue;
+        }
     </style>
 
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+    <style>
+        #st1 {
+            display: inline-block;
+            padding: 20px 0 20px;
+            vertical-align: middle;
+        }
+        #btn1 {
+            text-decoration: underline;
+            position: relative;
+            display: block;
+            padding: 16px 0;
+            margin: 0 50px;
+            font-size: 20px;
+            line-height: 16px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.753);
+            border:none;
+            background-color: white;
+            text-underline-offset:8px;
+        }
+        #btn2 {
+            position: relative;
+            display: block;
+            padding: 16px 0;
+            margin: 0 50px;
+            font-size: 20px;
+            line-height: 16px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.753);
+            border:none;
+            background-color: white;
+            text-underline-offset:8px;
+        }
+        #btn3 {
+            position: relative;
+            display: block;
+            padding: 16px 0;
+            margin: 0 50px;
+            font-size: 20px;
+            line-height: 16px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.753);
+            border:none;
+            background-color: white;
+            text-underline-offset:8px;
+        }
+    </style>
 </head>
 
 <body>
@@ -91,11 +155,34 @@
     </nav>
   </header>
 
+    <!---->
+
   <form style="margin-top: 50px; margin-left: 50px;">
     <h1><strong>스터디그룹</strong></h1>
     <td style='letter-spacing:50px'>
     <h5>함께 공부할 스터디그룹을 모집해보세요</h5></td>
 
+        <div class="box" style="border-bottom:5px solid whitesmoke; height:80px; min-width: 82%;">
+            <nav>
+                <ul>
+                    <li id="st1" class="item"><button id="btn1"
+                        onclick="document.getElementById('btn1').style['text-decoration']='underline';
+                        document.getElementById('btn2').style['text-decoration']='none';
+                        document.getElementById('btn3').style['text-decoration']='none'"
+                        >전체</button></li>
+                    <li id="st1" class="item"><button id="btn2"
+                        onclick="document.getElementById('btn2').style['text-decoration']='underline';
+                        document.getElementById('btn1').style['text-decoration']='none';
+                        document.getElementById('btn3').style['text-decoration']='none';"
+                        >모집 중</button></li>
+                    <li id="st1" class="item"><button id="btn3"
+                        onclick="document.getElementById('btn3').style['text-decoration']='underline';
+                        document.getElementById('btn1').style['text-decoration']='none';
+                        document.getElementById('btn2').style['text-decoration']='none';"
+                        >모집 완료</button></li>
+                </ul>
+            </nav>
+        </div>
 
     <body>
   	<section class="ftco-section">
@@ -105,9 +192,7 @@
   			<div class="row">
   				<div class="col-md-12">
   					<div class="table-wrap">
-              <div style='text-align: right;'>
-                <button type="button" class="btn btn-primary" onClick="location.href='studygroup_w.html'">글쓰기</button>
-              </div>
+
   						<table class="table">
   						  <thead class="thead-primary">
                   <tr>
@@ -153,6 +238,9 @@
   				</div>
   			</div>
   		</div>
+      <div id="btn_group" style='text-align: right;'>
+        <button type="button" class="navyBtn" onClick="location.href='studygroup_w.html'">글쓰기</button>
+      </div>
   	</section>
 
   	<script src="js/jquery.min.js"></script>
