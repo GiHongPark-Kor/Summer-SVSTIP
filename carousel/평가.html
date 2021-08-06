@@ -30,6 +30,21 @@
                 font-size: 3.5rem;
             }
         }
+         /* left 비율, 줄 높이고 싶으면 height 수정*/
+         div.left {
+        width: 56%;
+        height: 650px;
+        float: left;
+        box-sizing: border-box;
+        border-right: rgba(59, 58, 58, 0.596) solid 3px ;
+        }
+
+        /* right 비율 */
+        div.right {
+            width: 44%;
+            float: right;
+            box-sizing: border-box;
+        }
     </style>
 
 
@@ -80,26 +95,51 @@
         </nav>
     </header>
     <br>
-    <!-- <div>여기 밑으로 소스코드 넣어서 구현하시면 됩니다. (부트스트랩 or 구글링 코드 복사)</div> -->
-    
-    <!-- 부트스트랩 : 웹을 빨리 만들 수 있게 해주는 툴 -->
-    <div style="margin-left:30px; margin-top: 50px;">
-        1.강사님의 설명은 어땠나요? <p></p>
-        <button type="button" class="btn btn-secondary">최고에요</button>
-        <button style="margin-left:20px; width: 100px;" type="button" class="btn btn-secondary">양호</button>
-        <button style="margin-left:20px; width: 130px;" type="button" class="btn btn-secondary">그저그래요</button>
+    <div class = "left">
+        <div style=" margin-top: 40px; width: 400px; margin-left:100px;" class="card mb-3">
+            <img src="http://itimg.chosun.com/sitedata/image/202004/30/2020043001669_0.jpg" class="card-img-top" alt="sorry">
+            <div class="card-body">
+              <h5 class="card-title">제목</h5>
+              <p class="card-text">주제</p>
+              <p class="card-text"><small class="text-muted">Last updated 1 mins ago</small></p>
+            </div>
+          </div>
+    </div>
+
+    <div style="background-color: azure;" class = "right">
+        <div style="margin-left:100px; margin-top: 40px;">
+        1.How was the instructor's explanation? (essential) <p></p>
+        <button style="margin-left:10px; width: 100px;  height: 38px;"type=button" class="btn btn-secondary">Excellent</button>
+        <button style="margin-left:10px; width: 100px; height: 38px;" type="button" class="btn btn-secondary">Good</button>
+        <button style="margin-left:10px; width: 100px; height: 38px;" type="button" class="btn btn-secondary">Not bad</button>
     </div>
     <p></p> 
     <!-- 한칸띄우기 margin : 간격을 띄울 수 있게 도와주는 건데, 왼쪽 띄우고 싶으면 margin-left, 오른쪽은 margin-right, 위쪽은 margin-top, 아랫쪽은 margin-bottom || width : 가로 크기 조정하는 것-->
-    <div style="margin-left:70px;">
-        <button style = "width: 100px;" type="button"  class="btn btn-secondary">별로</button>
-        <button style = "width: 100px; margin-left: 20px;"type="button" class="btn btn-secondary">싫어요</button>
+    <div style="margin-left:100px;">
+        <button style = "margin-left:20px; width: 100px; height: 38px;" type="button"  class="btn btn-secondary">Bad</button>
+        <button style = "width: 100px; height: 38px; margin-left: 20px;"type="button" class="btn btn-secondary">Terrible</button>
     </div>
-
-    <div style="margin-top:50px; margin-left: 30px;">
-        2. 강사님께 남기고 싶은 말이 있나요?(선택)
+    <p></p>
+    <div style="margin-left:100px; margin-top: 40px;">
+        2.Please leave your instructor's rating!! (required)<p></p>
+        <button style="margin-left:20px; width: 100px; height: 38px;"type=button" class="btn btn-secondary">Perfect</button>
+        <button style="margin-left:20px; width: 100px;" type="button" class="btn btn-secondary">Good</button>
+        <button style="margin-left:20px; width: 110px;" type="button" class="btn btn-secondary">Not bad</button>
+    </div>
+    <p></p> 
+    <!-- 한칸띄우기 margin : 간격을 띄울 수 있게 도와주는 건데, 왼쪽 띄우고 싶으면 margin-left, 오른쪽은 margin-right, 위쪽은 margin-top, 아랫쪽은 margin-bottom || width : 가로 크기 조정하는 것-->
+    <div style="margin-left:100px;">
+        <button style = "margin-left:20px;width: 100px;" type="button"  class="btn btn-secondary">Bad</button>
+        <button style = "width: 100px; margin-left: 20px;"type="button" class="btn btn-secondary">Terrible</button>
+    </div>
+    <div style="margin-top:50px; margin-left: 100px;">
+        3.Do you have anything to say to the instructor? (Choose)<p></p>
         <div class="mb-3">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style = "width: 700px; height: 200px;" placeholder="리뷰를 남겨주세요."></textarea>
-        </div>  
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" style = "width: 400px; height: 150px;" placeholder="Please leave a review."></textarea>
+        </div> 
+        <p></p> 
+        <div>
+            <button style = "margin-left:12px; width: 380px;" type="button" class="btn btn-success">Register for a review</button> 
     </div>
+     
 </body>
