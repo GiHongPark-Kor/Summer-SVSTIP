@@ -1,3 +1,4 @@
+<!--스터디그룹 페이지 들어오면 보이는 페이지 (The whole)-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,6 +10,8 @@
     <title>Carousel Template · Bootstrap v5.0</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+
+
 
     <!-- Bootstrap core CSS -->
     <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -86,12 +89,54 @@
             background-color: white;
             text-underline-offset:8px;
         }
+        #btn4 {
+          margin-right : 5xpx
+        }
     </style>
     <style type="text/css">
       a:link { color: red; text-decoration: none;}
       a:visited { color: black; text-decoration: none;}
       a:hover { color: blue; text-decoration: underline;}
     </style>
+
+    <link href="carousel.css" rel="stylesheet">
+    <style>
+        #st2 {
+            display: inline-block;
+            padding: 20px 0 20px;
+            vertical-align: middle;
+        }
+        #st3 {
+            text-decoration: none;
+            position: relative;
+            display: block;
+            padding: 16px 0;
+            margin: 0 50px;
+            font-size: 20px;
+            line-height: 16px;
+            font-weight: 600;
+            color: #C0C0C0;
+            border:none;
+            background-color: white;
+            text-underline-offset:8px;
+        }
+        #st4 {
+            text-decoration: none;
+            position: relative;
+            display: block;
+            padding: 16px 0;
+            margin: 0 50px;
+            font-size: 20px;
+            line-height: 16px;
+            font-weight: 600;
+            color: #000000;
+            border:none;
+            background-color: white;
+            text-underline-offset:8px;
+        }
+    </style>
+
+
 
 </head>
 
@@ -155,31 +200,19 @@
     <!---->
 
   <form style="margin-top: 50px; margin-left: 50px;">
-    <h1><strong>스터디그룹</strong></h1>
+    <h1><strong>Study Group</strong></h1>
     <td style='letter-spacing:50px'>
-    <h5>함께 공부할 스터디그룹을 모집해보세요</h5></td>
+    <h5>Try to recruit a study group to study with.</h5></td>
 
-        <div class="box" style="border-bottom:5px solid whitesmoke; height:80px; min-width: 82%;">
-            <nav>
-                <ul>
-                    <li id="st1" class="item"><button id="btn1"
-                        onclick="document.getElementById('btn1').style['text-decoration']='underline';
-                        document.getElementById('btn2').style['text-decoration']='none';
-                        document.getElementById('btn3').style['text-decoration']='none'"
-                        >전체</button></li>
-                    <li id="st1" class="item"><button id="btn2"
-                        onclick="document.getElementById('btn2').style['text-decoration']='underline';
-                        document.getElementById('btn1').style['text-decoration']='none';
-                        document.getElementById('btn3').style['text-decoration']='none';"
-                        >모집 중</button></li>
-                    <li id="st1" class="item"><button id="btn3"
-                        onclick="document.getElementById('btn3').style['text-decoration']='underline';
-                        document.getElementById('btn1').style['text-decoration']='none';
-                        document.getElementById('btn2').style['text-decoration']='none';"
-                        >모집 완료</button></li>
-                </ul>
-            </nav>
-        </div>
+    <div class="box" style="border-bottom:5px solid whitesmoke; height:80px; min-width: 82%;">
+        <nav>
+            <ul>
+                <li id="st2" class="item"><a id="st4" href="studygroup_m.html">The whole</a></li>
+                <li id="st2" class="item"><a id="st3" href="studygroup_m2.html">Recruiting</a></li>
+                <li id="st2" class="item"><a id="st3" href="studygroup_m3.html">Recruitment complete</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <body>
   	<section class="ftco-section">
@@ -192,13 +225,13 @@
   						<table class="table">
   						  <thead class="thead-primary">
                   <tr>
-                    <th>번호</th>
-                    <th>모집중/모집완료</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>날짜</th>
-                    <th>조회수</th>
-                    <th>좋아요</th>
+                    <th>Number</th>
+                    <th>Recruitment</th>
+                    <th>Tilte</th>
+                    <th>Writer</th>
+                    <th>Date</th>
+                    <th>Views</th>
+                    <th>Like</th>
                   </tr>
   						  </thead>
   						  <tbody>
@@ -234,6 +267,7 @@
   				</div>
   			</div>
   		</div>
+
       <div>
         <nav aria-label="Page navigation example">
           <ul class="pagination justify-content-center">
@@ -253,10 +287,14 @@
           </ul>
         </nav>
       </div>
+
       <div id="btn_group" style='text-align: right;'>
-        <button type="button" class="btn btn-primary" onClick="location.href='studygroup_w.html'">글쓰기</button>
+        <input type = "text", placeholder = "Search">
+        <button type="button" class="btn btn-primary" style="margin-right: 20px" onClick="location.href='studygroup_s.html'">Search</button>
+        <button type="button" class="btn btn-primary" onClick="location.href='studygroup_w.html'">Writing</button>
       </div>
-  	</section>
+
+      </section>
 
   	<script src="js/jquery.min.js"></script>
     <script src="js/popper.js"></script>
