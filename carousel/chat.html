@@ -217,27 +217,15 @@
                                         Let's see. It says indentation on the line 48 was the problem.
                                     </div>
                                 </div>
-
-                                <div class="chat-message-right mb-4">
-                                    <div>
-                                        <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40">
-                                        <div class="text-muted small text-nowrap mt-2">2:35 am</div>
-                                    </div>
-                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
-                                        <div class="font-weight-bold mb-1">You</div>
-                                        Thank you
-                                    </div>
-                                </div>
-
-                                
-
+                                <!-- 동적으로 추가하는 부분 -->
+                                <div class="chat-message-right mb-4" id = "chat-append-area"></div>                       
                             </div>
                         </div>
 
                         <div class="flex-grow-0 py-3 px-4 border-top">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Type your message">
-                                <button class="btn btn-primary">Send</button>
+                                <input type="text" class="form-control" placeholder="Type your message" id = "input_text">
+                                <button class="btn btn-primary" onclick="append_text()">Send</button>
                             </div>
                         </div>
 
@@ -246,4 +234,29 @@
             </div>
         </div>
     </main>
+
+    <script>
+        var num = 0;
+        function append_text()
+        {
+            const name = document.getElementById('input_text').value;
+            if(num != 0)
+            {
+                var str = ' <div style="margin-top:23px;"> \
+                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40"> \
+                  <div class="text-muted small text-nowrap mt-2">2:35 am</div> \
+                  </div> <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3"> <div class="font-weight-bold mb-1">You</div> \
+                  ' + name + '</div>'
+            }else
+            {
+                var str = ' <div> \
+                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40"> \
+                  <div class="text-muted small text-nowrap mt-2">2:35 am</div> \
+                  </div> <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3"> <div class="font-weight-bold mb-1">You</div> \
+                  ' + name + '</div>'    
+                  num++;
+            }
+            document.getElementById('chat-append-area').innerHTML += str;
+        }
+    </script>
 </body>
