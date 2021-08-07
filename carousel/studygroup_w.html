@@ -1,3 +1,4 @@
+<!--스터디그룹 페이지 글을 쓸 때 나오는 페이지-->
 <!doctype html>
 <html lang="en">
 <head>
@@ -100,22 +101,22 @@
     </nav>
   </header>
   <form style="margin-top: 50px; margin-left: 50px;">
-    <h1><strong>스터디그룹</strong></h1>
+    <h1><strong>Study Group</strong></h1>
     <td style='letter-spacing:50px'>
-    <h5>함께 공부할 스터디그룹을 모집해보세요</h5></td>
+    <h5>Try to recruit a study group to study with.</h5></td>
 
     <br>
     <main role="main" class="container">
       <form name="form" method="POST" action="/bulletin_wr01">
         <div class="pt-1">
-        <input type="text" name="title" placeholder="제목을 입력하세요" style="border-radius:5px; width:100%; padding:5px;">
+        <input type="text" name="title" placeholder="Enter your title." style="border-radius:5px; width:100%; padding:5px;">
         </div>
         <div class="pt-1">
           <textarea id="summernote" name="contents"></textarea>
         </div>
         <script>
           $('#summernote').summernote({
-            placeholder: '내용을 입력해주세요',
+            placeholder: 'Enter your content.',
             tabsize: 2,
             height: 300
           });
@@ -130,8 +131,8 @@
 
 
     <div style='text-align: center;'>
-      <button type="button" class="btn btn-default" onClick="location.href='studygroup_m.html'">취소</button>
-      <button type="button" class="btn btn-default" onClick="location.href='studygroup_m.html'">완료</button>
+      <button type="button" class="btn btn-default" onClick="location.href='studygroup_m.html'">Cancellation</button>
+      <button type="button" class="btn btn-default" onClick="location.href='studygroup_m.html'">Completion</button>
 
     </div>
   </body>
