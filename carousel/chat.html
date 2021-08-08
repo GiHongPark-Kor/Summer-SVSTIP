@@ -55,6 +55,27 @@
             font-size:1px;
             font-weight:bold;
         }
+        .box-file-input label{
+        display:inline-block;
+        background:rgba(58, 216, 71, 0.699);
+        color:#fff;
+        padding:0px 15px;
+        line-height:40px;
+        cursor:pointer;
+        }
+
+        .box-file-input label:after{
+        content:"Photo";
+        }
+
+        .box-file-input .file-input{
+        display:none;
+        }
+
+        .box-file-input .filename{
+        display:inline-block;
+        /* padding-left:10px; */
+        }
     </style>
 
 
@@ -277,10 +298,11 @@
 
                         <div class="flex-grow-0 py-3 px-4 border-top">
                             <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Type your message" id = "input_text">
-                                <!-- 사진 첨부 버튼 추가 -->
-                                <button class="btn btn-primary" onclick="append_text()">Photos</button>
-                                <button class="btn btn-primary" onclick="append_text()">Send</button>
+                                 <!-- 텍스트 버튼 추가 -->
+                                 <input type="text" class="form-control" placeholder="Type your message" id = "input_text">
+                                 <!-- 사진 첨부 버튼 추가 -->
+                                 <div class="box-file-input"><label><input type="file" name="ev_display" class="file-input" onclick="append_img()" accept="image/*"></label><span class="filename"></div>
+                                 <button class="btn btn-primary" onclick="append_text()">Send</button>
                             </div>
                         </div>
 
@@ -318,6 +340,13 @@
             }
             document.getElementById('chat-append-area').innerHTML += str;
             document.getElementById('input_text').value = null;
+        }
+
+        function append_img() {
+            // 일단 4초 뒤 이미지1 파일 업로드 되도록 설정했습니다. 파일은 나중에 다른 걸로 바꿔서 사용하면 될 것 같아요!
+            setTimeout(function() {
+                document.getElementById('chat-append-area').innerHTML += "<img src='./이미지1.jpg' style = 'width:940px; height:450px; margin-bottom:10px'>";
+            }, 4000);
         }
     </script>
 </body>
