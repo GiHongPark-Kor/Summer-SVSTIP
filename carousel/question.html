@@ -84,15 +84,15 @@
         </nav>
     </header>
   <form style="margin-top: 50px; margin-left: 50px;">
-    <h1>질문을 등록해주세요.</h1>
+    <h1>Upload your questions</h1>
     <div class="input-group mb-3" style="margin-top: 20px;">
-      <button id = "btn1" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">카테고리</button>
+      <button id = "btn1" class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Category</button>
       <ul class="dropdown-menu">
         <li><a class="dropdown-item" id = "a1" >C language</a></li>
         <li><a class="dropdown-item" id = "a2" href="#">python language</a></li>
         <li><a class="dropdown-item" id = "a3" href="#">java language</a></li>
         <li><hr class="dropdown-divicder"></li>
-        <li><a class="dropdown-item" href="#" id = "a4">기타</a></li>
+        <li><a class="dropdown-item" href="#" id = "a4">etc.</a></li>
       </ul>
       <input type="text" class="form-control" id = "check_input" aria-label="Text input with dropdown button">
     </div>
@@ -104,8 +104,8 @@
         <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
         <label for="floatingTextarea2">Content</label>
       </div>
-      <button type="button" class="btn btn-primary btn-lg" onclick="func1()">등록하기</button>
-    <input type="reset" class="btn btn-secondary btn-lg" value="다시작성">
+      <button type="button" class="btn btn-primary btn-lg" onclick="func1()">Submit</button>
+    <input type="reset" class="btn btn-secondary btn-lg" value="Rewrite">
 </form>
     
     
@@ -127,11 +127,11 @@
 
     $("#a4").click(function(){
       $('#check_input').val('');
-      $('#btn1').text('기타');   
+      $('#btn1').text('etc.');   
     })
     function func1()
     {
-        alert("등록되었습니다");
+        alert("Submitted");
         window.location.href = "main(login).html";
     }
  </script>
