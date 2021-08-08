@@ -345,7 +345,10 @@
         function append_img() {
             // 일단 4초 뒤 이미지1 파일 업로드 되도록 설정했습니다. 파일은 나중에 다른 걸로 바꿔서 사용하면 될 것 같아요!
             setTimeout(function() {
-                document.getElementById('chat-append-area').innerHTML += "<img src='./이미지1.jpg' style = 'width:940px; height:450px; margin-bottom:10px'>";
+                document.getElementById('chat-append-area').innerHTML += ' <div style="margin-top:5px;"> \
+                 <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40"> \
+                  <div class="text-muted small text-nowrap mt-2">2:35 am</div> \
+                <img src="./이미지1.jpg" style = "width:940px; height:450px; margin-bottom:16px"></div>';
             }, 4000);
         }
     </script>
